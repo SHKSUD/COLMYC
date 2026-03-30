@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Colonel Mayank Chaubey – Indian Army Veteran, former Director SSIFS MEA, Geopolitical Strategist & Voice of #MayankSays. Sharp strategic insights on diplomacy, national security & RannNeeti.">
+<title>Colonel Mayank Chaubey | #MayankSays – Veteran · Strategist · Diplomat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Rajdhani:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive: #2d5a27;
+    --olive-mid: #3d7a35;
+    --olive-light: #4e9a44;
+    --gold: #2d5a27;
+    --gold-light: #4a8040;
+    --gold-pale: #8fc484;
+    --cream: #1a2e16;
+    --ivory: #0f1f0c;
+    --charcoal: #f7f0e0;
+    --saffron: #FF8C00;
+    --india-green: #138808;
+    --navy: #0a1628;
+    --text-main: #1a2e16;
+    --text-light: #4a6040;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Rajdhani', sans-serif;
+    background: var(--charcoal);
+    color: var(--cream);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    width: 12px; height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.08s ease, width 0.2s, height 0.2s;
+  }
+  body:hover .cursor { transform: translate(-50%, -50%); }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9990;
+    opacity: 0.6;
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed;
+    top: 0; width: 100%;
+    z-index: 1000;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(247, 240, 224, 0.96);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(45,90,39,0.2);
+    padding: 12px 40px;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: opacity 0.3s, color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-x-btn {
+    background: #000;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .nav-x-btn:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+  /* TRICOLOR STRIPE */
+  .tricolor-stripe {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    z-index: 900;
+    background: linear-gradient(to bottom, var(--saffron) 33%, #fff 33% 66%, var(--india-green) 66%);
+  }
+
+  /* ======================== HERO ======================== */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--charcoal);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 65% 50%, rgba(200,220,190,0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 80% 30%, rgba(45,90,39,0.08) 0%, transparent 60%),
+      linear-gradient(135deg, #f0e8d4 0%, #f7f0e0 40%, #ede5d0 100%);
+  }
+
+  /* Animated grid lines */
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(45,90,39,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45,90,39,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridScroll 20s linear infinite;
+  }
+  @keyframes gridScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(60px); }
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 120px 60px 80px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.8s ease both;
+  }
+  .eyebrow-line {
+    width: 40px; height: 1px;
+    background: var(--gold);
+  }
+  .eyebrow-text {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  h1.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5.5vw, 5.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--ivory);
+    margin-bottom: 20px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+  h1.hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-hashtag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-desc {
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: rgba(248,242,228,0.7);
+    max-width: 580px;
+    margin-bottom: 44px;
+    font-weight: 400;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: #fdf8ef;
+    padding: 14px 32px;
+    border: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(45,90,39,0.35);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--cream);
+    padding: 13px 30px;
+    border: 1px solid rgba(45,90,39,0.4);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(45,90,39,0.06);
+  }
+
+  /* STATS ROW */
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(45,90,39,0.2);
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(248,242,228,0.5);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* HERO PHOTO CARD */
+  .hero-photo-col {
+    position: relative;
+    animation: fadeLeft 0.9s 0.3s ease both;
+  }
+  .hero-photo-frame {
+    position: relative;
+    width: 100%;
+  }
+  .hero-photo-frame::before {
+    content: '';
+    position: absolute;
+    top: 20px; right: -20px;
+    width: 100%; height: 100%;
+    border: 1px solid rgba(45,90,39,0.3);
+    z-index: 0;
+  }
+  .hero-photo-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: -20px;
+    width: 60%; height: 60%;
+    border-left: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    z-index: 0;
+  }
+  .hero-photo-inner {
+    position: relative;
+    z-index: 1;
+    background: #d0cab8;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+  .hero-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, #d8d0bc 0%, #c8c0aa 100%);
+  }
+  .hero-photo-actual {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: contrast(1.05) brightness(0.97);
+  }
+
+  /* FLOATING BADGE */
+  .floating-badge {
+    position: absolute;
+    bottom: 30px; left: -30px;
+    z-index: 5;
+    background: var(--charcoal);
+    border: 1px solid rgba(45,90,39,0.4);
+    padding: 14px 20px;
+    min-width: 180px;
+    animation: badgePulse 3s ease-in-out infinite;
+  }
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(45,90,39,0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(45,90,39,0); }
+  }
+  .badge-label {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .badge-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-top: 2px;
+  }
+  .badge-sub {
+    font-size: 0.65rem;
+    color: rgba(248,242,228,0.5);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* Decorative elements */
+  .hero-deco-lines {
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0.15;
+  }
+  .deco-line { width: 60px; height: 1px; background: var(--gold); }
+  .deco-line:nth-child(2) { width: 40px; }
+  .deco-line:nth-child(3) { width: 80px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* SCROLL INDICATOR */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.5;
+    animation: fadeUp 1s 1s ease both;
+  }
+  .scroll-indicator span {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .scroll-line {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ======================== SECTIONS COMMON ======================== */
+  section { position: relative; overflow: hidden; }
+
+  .section-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 60px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .section-label .line { width: 30px; height: 1px; background: var(--gold); }
+  .section-label span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  h2.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--ivory);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  h2.section-title em { font-style: italic; color: var(--gold); }
+
+  /* ======================== ABOUT ======================== */
+  #about {
+    background: linear-gradient(180deg, var(--charcoal) 0%, #ede5d0 100%);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 60px;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(26,46,22,0.75);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .about-text p strong {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .quote-block {
+    border-left: 2px solid var(--gold);
+    padding: 20px 28px;
+    margin: 32px 0;
+    background: rgba(45,90,39,0.06);
+  }
+  .quote-block p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.6;
+  }
+  .quote-block cite {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  /* EXPERTISE CARDS */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .expertise-card {
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(45,90,39,0.15);
+    padding: 24px;
+    transition: all 0.35s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--gold);
+    transition: height 0.4s ease;
+  }
+  .expertise-card:hover {
+    background: rgba(45,90,39,0.08);
+    border-color: rgba(45,90,39,0.4);
+    transform: translateY(-3px);
+  }
+  .expertise-card:hover::before { height: 100%; }
+  .card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .card-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    font-size: 0.85rem;
+    color: rgba(26,46,22,0.55);
+    line-height: 1.6;
+  }
+
+  /* ======================== CAREER TIMELINE ======================== */
+  #career {
+    background: #ede5d0;
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 60px;
+    padding-left: 40px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), rgba(45,90,39,0.1));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.6s ease;
+  }
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -50px;
+    top: 4px;
+    width: 20px; height: 20px;
+    border: 2px solid var(--gold);
+    background: var(--charcoal);
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .timeline-item:hover .timeline-dot::after { opacity: 1; }
+  .timeline-item:hover .timeline-dot {
+    box-shadow: 0 0 20px rgba(45,90,39,0.5);
+  }
+
+  .timeline-period {
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .timeline-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-bottom: 6px;
+  }
+  .timeline-org {
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(45,90,39,0.85);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .timeline-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(26,46,22,0.6);
+    max-width: 600px;
+  }
+
+  /* ======================== MAYANKSAYS ======================== */
+  #mayanksays {
+    background: linear-gradient(180deg, #ede5d0 0%, #e8dfcc 100%);
+  }
+
+  .mayanksays-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hashtag-pill {
+    display: inline-block;
+    background: var(--gold);
+    color: #fdf8ef;
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .post-card {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(45,90,39,0.12);
+    box-shadow: 0 2px 12px rgba(45,90,39,0.06);
+    padding: 28px;
+    position: relative;
+    transition: all 0.35s ease;
+    cursor: pointer;
+  }
+  .post-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(45,90,39,0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .post-card:hover {
+    border-color: rgba(45,90,39,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(45,90,39,0.12);
+  }
+  .post-card:hover::after { opacity: 1; }
+
+  .post-card-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+    background: rgba(45,90,39,0.07);
+    border-color: rgba(45,90,39,0.25);
+  }
+
+  .post-tag {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .post-tag.military { color: var(--saffron); border-color: rgba(255,140,0,0.4); }
+  .post-tag.diplomacy { color: #2d7a25; border-color: rgba(45,122,37,0.4); }
+  .post-tag.featured { color: var(--gold); border-color: rgba(45,90,39,0.4); }
+  .post-tag.commentary { color: #a29bfe; border-color: rgba(162,155,254,0.4); }
+
+  .post-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 18px;
+  }
+  .post-card-featured .post-text {
+    font-size: 1.35rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .post-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .post-avatar {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, #c8d8c0, #a8c4a0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold);
+    border: 1px solid rgba(45,90,39,0.4);
+  }
+  .post-handle {
+    font-size: 0.78rem;
+    color: rgba(45,90,39,0.8);
+    font-weight: 600;
+  }
+  .post-date {
+    font-size: 0.72rem;
+    color: rgba(26,46,22,0.35);
+    margin-left: auto;
+  }
+
+  .post-engagement {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(45,90,39,0.1);
+  }
+  .engage-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    color: rgba(26,46,22,0.4);
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  .engage-item:hover { color: var(--gold); }
+
+  /* Live feed section */
+  .x-feed-embed {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(45,90,39,0.15);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  .x-feed-left h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--ivory);
+    margin-bottom: 10px;
+  }
+  .x-feed-left p {
+    font-size: 0.9rem;
+    color: rgba(26,46,22,0.6);
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .x-handle-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(45,90,39,0.15);
+    margin-bottom: 20px;
+  }
+  .x-logo {
+    width: 32px; height: 32px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .x-handle-text .handle { font-weight: 700; font-size: 0.95rem; }
+  .x-handle-text .followers { font-size: 0.78rem; color: rgba(248,242,228,0.45); }
+
+  /* ======================== RANN NEETI ======================== */
+  #rannneeti {
+    background: #e8dfcc;
+    position: relative;
+  }
+  #rannneeti::before {
+    content: 'रणनीति';
+    position: absolute;
+    right: -20px; top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(45,90,39,0.07);
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 20px;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(45,90,39,0.15);
+    margin-top: 60px;
+  }
+  .pillar {
+    background: #e8dfcc;
+    padding: 40px 30px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  .pillar:hover {
+    background: rgba(45,90,39,0.06);
+  }
+  .pillar:hover::before { transform: scaleX(1); }
+  .pillar-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(45,90,39,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .pillar-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+  .pillar-desc {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: rgba(26,46,22,0.55);
+  }
+
+  /* ======================== CONNECT ======================== */
+  #connect {
+    background: linear-gradient(180deg, #e8dfcc 0%, var(--charcoal) 100%);
+  }
+
+  .connect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 60px;
+  }
+
+  .connect-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .channel-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(45,90,39,0.12);
+    text-decoration: none;
+    color: var(--cream);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .channel-btn::after {
+    content: '→';
+    position: absolute;
+    right: 20px;
+    color: var(--gold);
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+  }
+  .channel-btn:hover {
+    border-color: rgba(45,90,39,0.5);
+    background: rgba(45,90,39,0.08);
+    transform: translateX(4px);
+  }
+  .channel-btn:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .channel-icon {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .channel-icon.x-icon { background: #000; color: #fff; font-weight: 900; }
+  .channel-icon.newsletter { background: rgba(201,162,39,0.15); color: var(--gold); font-size: 1.2rem; }
+  .channel-icon.youtube { background: rgba(255,0,0,0.15); color: #f00; }
+  .channel-icon.telegram { background: rgba(41,182,246,0.15); color: #29b6f6; }
+
+  .channel-info .channel-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  .channel-info .channel-desc {
+    font-size: 0.78rem;
+    color: rgba(26,46,22,0.4);
+    margin-top: 2px;
+  }
+
+  /* Newsletter form */
+  .newsletter-form {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(45,90,39,0.2);
+    padding: 40px;
+  }
+  .newsletter-form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    color: var(--ivory);
+    margin-bottom: 10px;
+  }
+  .newsletter-form p {
+    font-size: 0.9rem;
+    color: rgba(26,46,22,0.55);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .form-group {
+    display: flex;
+    gap: 0;
+    margin-bottom: 14px;
+  }
+  .form-group input {
+    flex: 1;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(45,90,39,0.2);
+    border-right: none;
+    padding: 13px 18px;
+    color: var(--cream);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .form-group input::placeholder { color: rgba(26,46,22,0.35); }
+  .form-group input:focus { border-color: rgba(45,90,39,0.5); }
+  .form-group button {
+    background: var(--gold);
+    color: #fdf8ef;
+    border: none;
+    padding: 13px 24px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .form-group button:hover { background: var(--gold-light); }
+  .form-note {
+    font-size: 0.72rem;
+    color: rgba(26,46,22,0.4);
+    letter-spacing: 0.5px;
+  }
+
+  /* ======================== FOOTER ======================== */
+  footer {
+    background: #e0d6c0;
+    border-top: 1px solid rgba(45,90,39,0.15);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .footer-tagline {
+    font-size: 0.72rem;
+    color: rgba(248,242,228,0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-links a {
+    color: rgba(26,46,22,0.5);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-size: 0.7rem;
+    color: rgba(26,46,22,0.35);
+    text-align: right;
+  }
+
+  /* ======================== INDIA FLAG ACCENT ======================== */
+  .india-flag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(45,90,39,0.2);
+    margin-bottom: 20px;
+  }
+  .flag-stripes {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 14px;
+    overflow: hidden;
+    border-radius: 1px;
+  }
+  .flag-stripe { flex: 1; }
+  .flag-stripe.sf { background: var(--saffron); }
+  .flag-stripe.wh { background: #fff; display: flex; align-items: center; justify-content: center; }
+  .flag-stripe.gr { background: var(--india-green); }
+  .chakra {
+    width: 6px; height: 6px;
+    border: 1px solid #000080;
+    border-radius: 50%;
+    position: relative;
+  }
+  .flag-text {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(248,242,228,0.5);
+    font-weight: 600;
+  }
+
+  /* ANIMATIONS for scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ACTIVE NAV */
+  .nav-links a.active { color: var(--gold); opacity: 1; }
+  .nav-links a.active::after { width: 100%; }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; padding: 120px 28px 60px; }
+    .hero-photo-col { order: -1; max-width: 320px; margin: 0 auto; }
+    .about-grid, .connect-grid { grid-template-columns: 1fr; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .post-card-featured { grid-template-columns: 1fr; }
+    .pillars-grid { grid-template-columns: 1fr 1fr; }
+    .section-inner { padding: 70px 28px; }
+    nav { padding: 14px 24px; }
+    nav.scrolled { padding: 10px 24px; }
+    .nav-links { display: none; }
+    footer { flex-direction: column; text-align: center; padding: 30px 28px; }
+    .footer-copy { text-align: center; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .x-feed-embed { grid-template-columns: 1fr; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; }
+  }
+
+  /* ── LANGUAGE TOGGLE ───────────────────────────────────── */
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    background: rgba(45,90,39,0.08);
+    border: 1px solid rgba(45,90,39,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .lang-btn {
+    padding: 6px 14px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border: none;
+    background: transparent;
+    color: rgba(26,46,22,0.5);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+  }
+  .lang-btn.active {
+    background: var(--gold);
+    color: #fdf8ef;
+    border-radius: 18px;
+  }
+  [lang="hi"] .hi-text { display: inline !important; }
+  [lang="hi"] .en-text { display: none !important; }
+  [lang="en"] .hi-text { display: none !important; }
+  [lang="en"] .en-text { display: inline !important; }
+  .hi-text { display: none; font-family: 'Noto Sans Devanagari', 'Rajdhani', sans-serif; }
+  .en-text { display: inline; }
+
+  /* ── WHATSAPP FLOATING BUTTON ───────────────────────────── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 8000;
+    width: 52px; height: 52px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: waPulse 2.5s ease-in-out infinite;
+  }
+  .wa-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+  }
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.3); }
+    50% { box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 0 0 10px rgba(37,211,102,0); }
+  }
+  .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+  .wa-tooltip {
+    position: absolute;
+    right: 60px;
+    background: #1a2e16;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .wa-float:hover .wa-tooltip { opacity: 1; }
+
+  /* ── POST WHATSAPP SHARE CHIP ───────────────────────────── */
+  .wa-share-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #25D366;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+    border: 1px solid rgba(37,211,102,0.3);
+    padding: 4px 10px;
+    border-radius: 12px;
+  }
+  .wa-share-chip:hover { opacity: 0.75; }
+
+  /* ── X LIVE EMBED CONTAINER ─────────────────────────────── */
+  .x-live-embed-wrap {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 40px;
+    align-items: start;
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(45,90,39,0.15);
+    padding: 30px;
+  }
+  .x-live-widget {
+    border: 1px solid rgba(45,90,39,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    max-height: 520px;
+  }
+  .x-live-right h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--cream);
+    margin-bottom: 10px;
+    line-height: 1.15;
+  }
+  .x-live-right p {
+    font-size: 0.9rem;
+    color: rgba(26,46,22,0.6);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .x-live-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(45,90,39,0.12);
+    margin-bottom: 20px;
+  }
+  .x-live-meta .x-logo { width:32px;height:32px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem;color:#fff;flex-shrink:0; }
+  .x-live-meta .handle { font-weight:700;font-size:0.95rem;color:var(--cream); }
+  .x-live-meta .flw { font-size:0.75rem;color:rgba(26,46,22,0.45); }
+  @media(max-width:900px){
+    .x-live-embed-wrap { grid-template-columns:1fr; }
+    .x-live-widget { max-height: 360px; }
+  }
+</style>
+
+<!-- SCHEMA MARKUP — Person + WebPage (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.colmayankchaubey.com/#person",
+      "name": "Mayank Chaubey",
+      "honorificPrefix": "Colonel",
+      "alternateName": ["Col Mayank Chaubey", "col_chaubey"],
+      "description": "Distinguished Indian Army veteran, former Director at Sushma Swaraj Institute of Foreign Service (SSIFS), Ministry of External Affairs. Geopolitical strategist, author of #MayankSays and #RannNeeti.",
+      "image": "https://www.colmayankchaubey.com/images/colonel-mayank-chaubey.jpg",
+      "url": "https://www.colmayankchaubey.com",
+      "sameAs": [
+        "https://x.com/col_chaubey",
+        "https://twitter.com/col_chaubey"
+      ],
+      "jobTitle": [
+        "Indian Army Veteran",
+        "Advisor",
+        "Vice President",
+        "Geopolitical Strategist"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "RBSVM",
+          "description": "Strategic advisory organisation"
+        },
+        {
+          "@type": "Organization",
+          "name": "Xenaverse"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Indian Army"
+        },
+        {
+          "@type": "Organization",
+          "name": "Sushma Swaraj Institute of Foreign Service (SSIFS)",
+          "parentOrganization": {
+            "@type": "GovernmentOrganization",
+            "name": "Ministry of External Affairs, Government of India"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "Yoga Certification Board (YCB)"
+        }
+      ],
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsAbout": [
+        "Geopolitics",
+        "Indian Foreign Policy",
+        "National Security",
+        "Military Strategy",
+        "Diplomacy",
+        "India-Pakistan Relations",
+        "RannNeeti"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.colmayankchaubey.com/#webpage",
+      "url": "https://www.colmayankchaubey.com",
+      "name": "Colonel Mayank Chaubey | #MayankSays – Veteran · Strategist · Diplomat",
+      "description": "Official website of Colonel Mayank Chaubey – Indian Army Veteran, Geopolitical Strategist and creator of #MayankSays and #RannNeeti.",
+      "about": { "@id": "https://www.colmayankchaubey.com/#person" },
+      "inLanguage": ["en", "hi"],
+      "keywords": "Colonel Mayank Chaubey, MayankSays, RannNeeti, Indian Army Veteran, Geopolitical Strategist, SSIFS MEA, col_chaubey"
+    }
+  ]
+}
+
+  // ── LANGUAGE TOGGLE ────────────────────────────────────────
+  function setLang(lang) {
+    document.getElementById('html-root').setAttribute('lang', lang);
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-hi').classList.toggle('active', lang === 'hi');
+    localStorage.setItem('mc_lang', lang);
+  }
+  // Restore saved preference
+  (function() {
+    const saved = localStorage.getItem('mc_lang');
+    if (saved && saved !== 'en') setLang(saved);
+  })();
+
+</script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- TRICOLOR STRIPE -->
+<div class="tricolor-stripe"></div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-brand">#MayankSays</div>
+  <div class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#career">Career</a>
+    <a href="#mayanksays">Insights</a>
+    <a href="#rannneeti">RannNeeti</a>
+    <a href="#connect">Connect</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">हि</button>
+    </div>
+    <a href="https://x.com/col_chaubey" target="_blank" class="nav-x-btn">
+      <span style="font-weight:900;font-size:0.95rem;">𝕏</span> @col_chaubey
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="india-flag-badge">
+        <div class="flag-stripes">
+          <div class="flag-stripe sf"></div>
+          <div class="flag-stripe wh"><div class="chakra"></div></div>
+          <div class="flag-stripe gr"></div>
+        </div>
+        <span class="flag-text"><span class="en-text">Proud Son of India</span><span class="hi-text">भारत का गर्वित पुत्र</span></span>
+      </div>
+      <div class="hero-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text"><span class="en-text">Indian Army Veteran &amp; Geopolitical Strategist</span><span class="hi-text">भारतीय सेना के वयोवृद्ध और भू-राजनीति विशेषज्ञ</span></span>
+      </div>
+      <h1 class="hero-title">
+        Colonel<br>
+        <em>Mayank</em><br>
+        Chaubey
+      </h1>
+      <div class="hero-hashtag">#MayankSays &nbsp;·&nbsp; #RannNeeti</div>
+      <p class="hero-desc">
+        <span class="en-text">Distinguished veteran of the Indian Army. Former Director at SSIFS, Ministry of External Affairs. Strategic voice cutting through noise on geopolitics, diplomacy &amp; national security.</span>
+        <span class="hi-text">भारतीय सेना के गौरवशाली सेवानिवृत्त अधिकारी। विदेश मंत्रालय के SSIFS के पूर्व निदेशक। भू-राजनीति, कूटनीति और राष्ट्रीय सुरक्षा पर स्पष्ट रणनीतिक आवाज़।</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="https://x.com/col_chaubey" target="_blank" class="btn-primary"><span class="en-text">Follow on 𝕏</span><span class="hi-text">𝕏 पर फॉलो करें</span></a>
+        <a href="#mayanksays" class="btn-outline"><span class="en-text">Read #MayankSays</span><span class="hi-text">#मयंकसेज़ पढ़ें</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" id="counter-followers">0</span>
+          <span class="stat-label"><span class="en-text">𝕏 Followers</span><span class="hi-text">𝕏 फ़ॉलोअर्स</span></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">★★★</span>
+          <span class="stat-label"><span class="en-text">Army Veteran</span><span class="hi-text">सेना के वयोवृद्ध</span></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-label"><span class="en-text">Leadership Roles</span><span class="hi-text">नेतृत्व की भूमिकाएं</span></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label"><span class="en-text">Strategic Clarity</span><span class="hi-text">रणनीतिक स्पष्टता</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTO CARD -->
+    <div class="hero-photo-col">
+      <div class="hero-photo-frame">
+        <div class="hero-photo-inner">
+          <img src="data:image/png;base64,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" class="hero-photo-actual" alt="Colonel Mayank Chaubey - Indian Army Veteran" />
+        </div>
+      </div>
+      <div class="floating-badge">
+        <div class="badge-label">𝕏 Handle</div>
+        <div class="badge-value">@col_chaubey</div>
+        <div class="badge-sub">22,500+ Followers <span style="font-size:0.55rem;opacity:0.5;">[verify]</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-deco-lines">
+    <div class="deco-line"></div>
+    <div class="deco-line"></div>
+    <div class="deco-line"></div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">
+      <div class="line"></div>
+      <span>The Man &amp; His Mission</span>
+    </div>
+    <h2 class="section-title reveal"><span class="en-text">Veteran. Diplomat. <em>Visionary.</em></span><span class="hi-text">वयोवृद्ध। राजनयिक। <em>दूरदर्शी।</em></span></h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">
+          Colonel Mayank Chaubey is no ordinary commentator. He brings to the table what few can — 
+          <strong>genuine boots-on-ground military experience</strong> forged in the Indian Army, combined with 
+          elite diplomatic training as Director at the <strong>Sushma Swaraj Institute of Foreign Service (SSIFS)</strong>, 
+          Ministry of External Affairs.
+        </p>
+        <div class="quote-block reveal">
+          <p>"Strategy without clarity is noise. I cut through the noise — that is RannNeeti."</p>
+          <cite>— Colonel Mayank Chaubey, #MayankSays</cite>
+        </div>
+        <p class="reveal">
+          His expertise spans national security doctrine, <strong>India's foreign policy architecture</strong>, 
+          wellness frameworks as Principal Consultant at the <strong>Yoga Certification Board (YCB)</strong>, 
+          and frontier ventures as <strong>Vice President at Xenaverse</strong>. Today, as Advisor at RBSVM, 
+          he shapes institutional strategy at the highest level.
+        </p>
+        <p class="reveal">
+          On X, his handle <strong>@col_chaubey</strong> has become a must-follow destination for unfiltered 
+          strategic insight — calling out hypocrisies, celebrating India's diplomatic rise, and building 
+          a community of strategic thinkers through <strong>#MayankSays</strong> and <strong>#RannNeeti</strong>.
+        </p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal">
+          <span class="card-icon">🎖️</span>
+          <div class="card-title">Military Strategy</div>
+          <div class="card-desc">Decades of service in one of the world's finest armies — strategic doctrine at its purest.</div>
+        </div>
+        <div class="expertise-card reveal">
+          <span class="card-icon">🌐</span>
+          <div class="card-title">Geopolitics</div>
+          <div class="card-desc">Deep understanding of India's foreign policy, neighbourhood dynamics and global alignments.</div>
+        </div>
+        <div class="expertise-card reveal">
+          <span class="card-icon">🏛️</span>
+          <div class="card-title">Diplomacy</div>
+          <div class="card-desc">Former Director at SSIFS, MEA — shaped next-gen Indian diplomats at India's premier institute.</div>
+        </div>
+        <div class="expertise-card reveal">
+          <span class="card-icon">🧘</span>
+          <div class="card-title">Wellness Policy</div>
+          <div class="card-desc">Principal Consultant YCB — bringing disciplined wellness frameworks into national policy.</div>
+        </div>
+        <div class="expertise-card reveal">
+          <span class="card-icon">🚀</span>
+          <div class="card-title">Futurism</div>
+          <div class="card-desc">Vice President Xenaverse — driving frontier thinking at the intersection of tech and strategy.</div>
+        </div>
+        <div class="expertise-card reveal">
+          <span class="card-icon">🗣️</span>
+          <div class="card-title">Strategic Commentary</div>
+          <div class="card-desc">22,500+ followers on X for no-nonsense analysis that cuts through noise with precision.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER TIMELINE -->
+<section id="career">
+  <div class="section-inner">
+    <div class="section-label reveal">
+      <div class="line"></div>
+      <span>Service &amp; Leadership</span>
+    </div>
+    <h2 class="section-title reveal"><span class="en-text">A Journey of <em>Distinction</em></span><span class="hi-text">एक <em>विशिष्ट</em> यात्रा</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Present</div>
+        <div class="timeline-role">Advisor, RBSVM</div>
+        <div class="timeline-org">RBSVM <em style="font-size:0.75rem;color:rgba(45,90,39,0.45);font-style:normal;">[verify full organisation name]</em></div>
+        <div class="timeline-desc">Guiding strategic institutional initiatives with the full weight of military and diplomatic experience. <em style="font-size:0.78rem;color:rgba(45,90,39,0.45);">[Confirm current role title]</em></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Present</div>
+        <div class="timeline-role">Vice President</div>
+        <div class="timeline-org">Xenaverse <em style="font-size:0.75rem;color:rgba(45,90,39,0.45);font-style:normal;">[verify full company name & current role]</em></div>
+        <div class="timeline-desc">Driving futuristic vision and strategic thought leadership at the cutting edge of technology and innovation.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Former</div>
+        <div class="timeline-role">Director</div>
+        <div class="timeline-org">Sushma Swaraj Institute of Foreign Service (SSIFS), Ministry of External Affairs</div>
+        <div class="timeline-desc">Held the prestigious position of Director at India's premier foreign-service training institute — shaping the next generation of Indian diplomats under the Ministry of External Affairs.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Former</div>
+        <div class="timeline-role">Principal Consultant</div>
+        <div class="timeline-org">Yoga Certification Board (YCB)</div>
+        <div class="timeline-desc">Brought disciplined wellness and holistic frameworks into national policy, reinforcing India's global yoga leadership.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Distinguished Service</div>
+        <div class="timeline-role">Colonel, Indian Army</div>
+        <div class="timeline-org">Indian Army — World's Finest</div>
+        <div class="timeline-desc">Served with distinction in one of the world's premier fighting forces. Built foundational expertise in strategy, leadership, and national security that underpins everything Colonel Chaubey does today. <em style="font-size:0.8rem;color:rgba(45,90,39,0.5);">[Verify: exact years of service]</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAYANKSAYS -->
+<section id="mayanksays">
+  <div class="section-inner">
+    <!-- EDITORIAL NOTICE — remove before publishing -->
+    <div style="background:rgba(255,193,7,0.12);border:1px solid rgba(255,193,7,0.5);padding:14px 20px;margin-bottom:28px;display:flex;align-items:flex-start;gap:12px;border-radius:2px;">
+      <span style="font-size:1.1rem;flex-shrink:0;">📋</span>
+      <div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7a5c00;margin-bottom:4px;">Content Review Required — Remove this banner before publishing</div>
+        <div style="font-size:0.82rem;color:#6a4c00;line-height:1.6;">
+          The 4 post cards below are <strong>illustrative placeholders only</strong> — the quotes were written to represent Colonel Chaubey's voice but are <strong>not his actual posts</strong>. 
+          Please replace each with real posts from <a href="https://x.com/col_chaubey" target="_blank" style="color:#2d5a27;font-weight:700;">@col_chaubey</a> before going live. 
+          The live X feed widget below this section already shows real posts. 
+          Also verify: follower count · years of service · full names of RBSVM and Xenaverse.
+        </div>
+      </div>
+    </div>
+    <div class="mayanksays-header">
+      <div>
+        <div class="section-label reveal">
+          <div class="line"></div>
+          <span>Strategic Insights</span>
+        </div>
+        <div class="hashtag-pill">#MayankSays</div>
+        <h2 class="section-title reveal" style="margin-top:8px;"><span class="en-text">Where Strategy <em>Meets Clarity</em></span><span class="hi-text">जहाँ रणनीति <em>स्पष्टता से मिलती है</em></span></h2>
+      </div>
+      <a href="https://x.com/col_chaubey" target="_blank" class="btn-outline reveal" style="align-self:flex-end;">View All on 𝕏 →</a>
+    </div>
+
+    <div class="posts-grid">
+      <!-- Featured Post -->
+      <div class="post-card post-card-featured reveal">
+        <div>
+          <span class="post-tag featured">#MayankSays · Featured</span>
+          <div class="post-text" style="font-style:normal;font-size:0.95rem;">
+            <span style="display:block;font-family:'Rajdhani',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(45,90,39,0.45);margin-bottom:10px;border:1px dashed rgba(45,90,39,0.3);padding:8px 12px;background:rgba(45,90,39,0.04);">
+              ⚠ PLACEHOLDER — Replace with Colonel Chaubey's actual featured post from @col_chaubey
+            </span>
+            Paste the URL of a real tweet here and use X's embed feature, or copy the exact text of a post by @col_chaubey to feature it here prominently.
+          </div>
+          <div class="post-meta">
+            <div class="post-author">
+              <div class="post-avatar">MC</div>
+              <span class="post-handle">@col_chaubey</span>
+            </div>
+            <span class="post-date">#MayankSays</span>
+          </div>
+          <div class="post-engagement">
+            <a href="https://x.com/col_chaubey" target="_blank" class="engage-item" style="color: var(--gold); text-decoration:none;">View real posts on 𝕏 →</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-end;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:700;color:rgba(45,90,39,0.1);line-height:1">"</div>
+          <a href="https://x.com/col_chaubey" target="_blank" class="btn-primary" style="font-size:0.75rem;white-space:nowrap;">Follow @col_chaubey</a>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="post-card reveal">
+        <span class="post-tag military">#RannNeeti · Defence</span>
+        <div class="post-text" style="font-style:normal;font-size:0.88rem;color:rgba(26,46,22,0.45);">
+          <span style="display:block;font-family:'Rajdhani',sans-serif;font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(45,90,39,0.4);margin-bottom:8px;">⚠ Placeholder</span>
+          Replace with a real #RannNeeti post from @col_chaubey — paste the actual text or embed a tweet URL here.
+        </div>
+        <div class="post-meta">
+          <div class="post-author">
+            <div class="post-avatar">MC</div>
+            <span class="post-handle">@col_chaubey</span>
+          </div>
+          <span class="post-date">#RannNeeti</span>
+        </div>
+        <div class="post-engagement">
+          <a href="https://x.com/col_chaubey" target="_blank" style="font-size:0.75rem;color:var(--gold);text-decoration:none;">Find real posts →</a>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="post-card reveal">
+        <span class="post-tag diplomacy">#MayankSays · Diplomacy</span>
+        <div class="post-text" style="font-style:normal;font-size:0.88rem;color:rgba(26,46,22,0.45);">
+          <span style="display:block;font-family:'Rajdhani',sans-serif;font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(45,90,39,0.4);margin-bottom:8px;">⚠ Placeholder</span>
+          Replace with a real #MayankSays diplomacy post from @col_chaubey — paste the actual text or embed a tweet URL here.
+        </div>
+        <div class="post-meta">
+          <div class="post-author">
+            <div class="post-avatar">MC</div>
+            <span class="post-handle">@col_chaubey</span>
+          </div>
+          <span class="post-date">#MayankSays</span>
+        </div>
+        <div class="post-engagement">
+          <a href="https://x.com/col_chaubey" target="_blank" style="font-size:0.75rem;color:var(--gold);text-decoration:none;">Find real posts →</a>
+        </div>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="post-card reveal">
+        <span class="post-tag commentary">#MayankSays · Culture</span>
+        <div class="post-text" style="font-style:normal;font-size:0.88rem;color:rgba(26,46,22,0.45);">
+          <span style="display:block;font-family:'Rajdhani',sans-serif;font-size:0.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(45,90,39,0.4);margin-bottom:8px;">⚠ Placeholder</span>
+          Replace with a real #MayankSays culture or commentary post from @col_chaubey — paste the actual text or embed a tweet URL here.
+        </div>
+        <div class="post-meta">
+          <div class="post-author">
+            <div class="post-avatar">MC</div>
+            <span class="post-handle">@col_chaubey</span>
+          </div>
+          <span class="post-date">#MayankSays</span>
+        </div>
+        <div class="post-engagement">
+          <a href="https://x.com/col_chaubey" target="_blank" style="font-size:0.75rem;color:var(--gold);text-decoration:none;">Find real posts →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- X Feed Embed Box -->
+    <div class="x-feed-embed reveal">
+      <div class="x-feed-left">
+        <h3>Live 𝕏 Feed</h3>
+        <p>Get Colonel Chaubey's strategic insights in real time. Follow @col_chaubey on X for unfiltered daily commentary on what matters to India.</p>
+        <div class="x-handle-display">
+          <div class="x-logo" style="font-weight:900;">𝕏</div>
+          <div class="x-handle-text">
+            <div class="handle">@col_chaubey</div>
+            <div class="followers">22,500+ followers · Growing</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://x.com/col_chaubey" target="_blank" class="btn-primary" style="font-size:0.78rem;">Follow on 𝕏</a>
+          <a href="https://x.com/intent/tweet?text=I+love+%23MayankSays+by+%40col_chaubey+%E2%80%93+India%27s+sharpest+strategic+voice!&hashtags=MayankSays,RannNeeti" target="_blank" class="btn-outline" style="font-size:0.78rem;">Share #MayankSays</a>
+        </div>
+      </div>
+      <div style="border-left:1px solid rgba(45,90,39,0.15);padding-left:30px;">
+        <div style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:700;">Embed Live Feed</div>
+        <p style="font-size:0.85rem;color:rgba(26,46,22,0.55);line-height:1.7;margin-bottom:16px;">Add the official X timeline widget to display live @col_chaubey posts. Paste the embed code into your CMS or copy-paste the script below.</p>
+        <div style="background:rgba(0,0,0,0.5);border:1px solid rgba(201,162,39,0.1);padding:14px;font-family:monospace;font-size:0.72rem;color:rgba(201,162,39,0.7);line-height:1.6;word-break:break-all;">
+          &lt;a class="twitter-timeline"<br>
+          &nbsp;href="https://x.com/col_chaubey"&gt;<br>
+          &nbsp;Tweets by @col_chaubey<br>
+          &lt;/a&gt;<br>
+          &lt;script async src="https://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RANNNEETI PILLARS -->
+<section id="rannneeti">
+  <div class="section-inner">
+    <div class="section-label reveal">
+      <div class="line"></div>
+      <span>The Strategic Framework</span>
+    </div>
+    <h2 class="section-title reveal"><span class="en-text">#RannNeeti — <em>India's Strategic Compass</em></span><span class="hi-text">#रणनीति — <em>भारत की सामरिक दिशा</em></span></h2>
+    <p class="reveal" style="max-width:620px;font-size:1rem;line-height:1.75;color:rgba(26,46,22,0.6);margin-top:14px;">
+      RannNeeti (रणनीति) — the Sanskrit word for strategy — is Colonel Chaubey's framework for understanding 
+      India's place in the world. Four pillars. One mission: Strategic Clarity for a Rising Bharat.
+    </p>
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <span class="pillar-number">01</span>
+        <div class="pillar-title">Senabal — Military Might</div>
+        <div class="pillar-desc">Understanding India's defence posture, force capabilities and the doctrine of credible deterrence.</div>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-number">02</span>
+        <div class="pillar-title">Rajniti — Diplomatic Power</div>
+        <div class="pillar-desc">Decoding India's foreign policy, strategic alliances and MEA's expanding global footprint.</div>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-number">03</span>
+        <div class="pillar-title">Sanskriti — Cultural Identity</div>
+        <div class="pillar-desc">Defending India's civilizational heritage against distortion, misinformation and cultural warfare.</div>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-number">04</span>
+        <div class="pillar-title">Bhavishya — Strategic Vision</div>
+        <div class="pillar-desc">India's future at the frontier — tech, Xenaverse, wellness diplomacy and Amrit Kaal strategy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect">
+  <div class="section-inner">
+    <div class="section-label reveal">
+      <div class="line"></div>
+      <span>Join The Movement</span>
+    </div>
+    <h2 class="section-title reveal"><span class="en-text">Connect with <em>Colonel Chaubey</em></span><span class="hi-text"><em>कर्नल चौबे</em> से जुड़ें</span></h2>
+
+    <div class="connect-grid">
+      <div>
+        <p class="reveal" style="font-size:1rem;line-height:1.75;color:rgba(26,46,22,0.6);margin-bottom:28px;">
+          Stay ahead of the curve. Follow Colonel Mayank Chaubey across platforms for daily strategic 
+          insights that cut through noise and illuminate India's path forward.
+        </p>
+        <div class="connect-channels">
+          <a href="https://x.com/col_chaubey" target="_blank" class="channel-btn reveal">
+            <div class="channel-icon x-icon" style="font-weight:900;font-size:1.1rem;">𝕏</div>
+            <div class="channel-info">
+              <div class="channel-name">Follow on X (Twitter)</div>
+              <div class="channel-desc">@col_chaubey · 22,500+ followers <span style="font-size:0.65rem;opacity:0.5;">[verify]</span> · Daily #MayankSays</div>
+            </div>
+          </a>
+          <a href="#" class="channel-btn reveal">
+            <div class="channel-icon youtube">▶</div>
+            <div class="channel-info">
+              <div class="channel-name">YouTube Shorts</div>
+              <div class="channel-desc">Latest #MayankSays video reels — crisp, sharp, strategic</div>
+            </div>
+          </a>
+          <a href="#" class="channel-btn reveal">
+            <div class="channel-icon telegram">✈</div>
+            <div class="channel-info">
+              <div class="channel-name">#RannNeeti Telegram</div>
+              <div class="channel-desc">Strategic community — coming soon</div>
+            </div>
+          </a>
+          <a href="https://x.com/intent/tweet?text=%40col_chaubey+%23MayankSays+%23RannNeeti" target="_blank" class="channel-btn reveal">
+            <div class="channel-icon newsletter">✍️</div>
+            <div class="channel-info">
+              <div class="channel-name">Discuss on 𝕏</div>
+              <div class="channel-desc">Reply or tag @col_chaubey — join the conversation</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="newsletter-form reveal">
+        <h3>#MayankSays<br>In Your Inbox</h3>
+        <p>
+          Subscribe to the newsletter and receive Colonel Chaubey's sharpest strategic 
+          insights directly — before the noise takes over. Coming soon.
+        </p>
+        <div class="form-group">
+          <input type="email" placeholder="Your email address" id="emailInput">
+          <button onclick="handleSubscribe()">Subscribe</button>
+        </div>
+        <div id="subscribe-msg" style="display:none;font-size:0.82rem;color:var(--gold);margin-top:8px;font-weight:600;"></div>
+        <div class="form-note">No spam. Pure strategy. Unsubscribe anytime.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Colonel Mayank Chaubey</div>
+    <div class="footer-tagline">Indian Army Veteran · Geopolitical Strategist · #MayankSays</div>
+  </div>
+  <div class="footer-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#career">Career</a>
+    <a href="#mayanksays">Insights</a>
+    <a href="https://x.com/col_chaubey" target="_blank">𝕏 @col_chaubey</a>
+  </div>
+  <div class="footer-copy">
+    <div>© 2026 Colonel Mayank Chaubey</div>
+    <div style="margin-top:4px;">जय हिन्द 🇮🇳</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float"
+   href="https://wa.me/?text=Check%20out%20%23MayankSays%20by%20Colonel%20Mayank%20Chaubey%20%E2%80%94%20India%27s%20sharpest%20strategic%20voice%21%20%40col_chaubey%20%23RannNeeti"
+   target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+  <span class="wa-tooltip">Share on WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // CUSTOM CURSOR
+  const cursor = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+  });
+
+  function animateCursor() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    cursorRing.style.left = ringX + 'px';
+    cursorRing.style.top = ringY + 'px';
+    cursorRing.style.transform = 'translate(-50%, -50%)';
+    cursor.style.transform = 'translate(-50%, -50%)';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.querySelectorAll('a, button, .expertise-card, .post-card, .pillar').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorRing.style.width = '60px';
+      cursorRing.style.height = '60px';
+      cursor.style.opacity = '0.5';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorRing.style.width = '36px';
+      cursorRing.style.height = '36px';
+      cursor.style.opacity = '1';
+    });
+  });
+
+  // NAVBAR SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // COUNTER ANIMATION
+  function animateCounter(el, target, suffix = '') {
+    let start = 0;
+    const duration = 2000;
+    const step = 16;
+    const increment = target / (duration / step);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        el.textContent = target.toLocaleString() + suffix;
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(start).toLocaleString() + suffix;
+      }
+    }, step);
+  }
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+  const timelineItems = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80 * (Array.from(reveals).indexOf(entry.target) % 4));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineItems.forEach(el => timelineObserver.observe(el));
+
+  // Counter trigger when hero is visible
+  const counterEl = document.getElementById('counter-followers');
+  let counterDone = false;
+  const counterObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !counterDone) {
+      counterDone = true;
+      animateCounter(counterEl, 22500, '+'); // ⚠ VERIFY: update this number before launch
+    }
+  });
+  counterObserver.observe(counterEl);
+
+  // ACTIVE NAV on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // NEWSLETTER
+  function handleSubscribe() {
+    const email = document.getElementById('emailInput').value;
+    const msg = document.getElementById('subscribe-msg');
+    if (!email || !email.includes('@')) {
+      msg.style.display = 'block';
+      msg.style.color = '#ff6b6b';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    msg.style.display = 'block';
+    msg.style.color = 'var(--gold)';
+    msg.textContent = '✓ You\'re on the list! #MayankSays coming to your inbox soon.';
+    document.getElementById('emailInput').value = '';
+  }
+
+  // Enter key for newsletter
+  document.getElementById('emailInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleSubscribe();
+  });
+
+  // PARALLAX on hero
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const heroGrid = document.querySelector('.hero-grid');
+    if (heroGrid) {
+      heroGrid.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
+  });
+</script>
+</body>
+</html>
